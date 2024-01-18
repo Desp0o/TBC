@@ -3,6 +3,16 @@
   src: url("../assets/fonts/wfont.woff2");
 }
 
+@font-face {
+  font-family: "wfont-bold";
+  src: url("../assets/fonts/wfont-bold.woff2");
+}
+
+@font-face {
+  font-family: "wfont-medium";
+  src: url("../assets/fonts/wfont-medium.woff2");
+}
+
 *,
 *::before,
 *::after {
@@ -40,9 +50,3 @@ a{
   color: inherit;
 }
 
-.container{
-  width: 100%;
-  max-width: 960px;
-  
-  margin: 0 auto;
-}

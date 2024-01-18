@@ -17,6 +17,9 @@ nav {
 .navbar_inner {
   height: 100%;
   width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,6 +40,7 @@ nav {
 }
 
 .burger-menu,
+.overlay,
 .res_menu_panel {
   display: none;
 }
@@ -143,7 +147,7 @@ nav {
 
   .res_menu_panel{
     position: fixed;
-    right: -200px;
+    right: -60%;
     top: 0;
     z-index: 51;
 
@@ -153,7 +157,7 @@ nav {
 
     box-sizing: border-box;
     height: 100svb;
-    width: 200px;
+    width: 60%;
 
     display: flex;
     flex-direction: column;
