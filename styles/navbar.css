@@ -87,15 +87,21 @@ nav {
     width: 50%;
 
     transform-origin: right;
-    transition: all .33s cubic-bezier(.54,-.81,.57,.57);
+    transition: transform .33s cubic-bezier(.54,-.81,.57,.57), background-color 0s;
   }
 
   .burger_stick_top.open {
     transform: rotate(-90deg) translateX(4px);
+    background-color: #767676;
   }
 
   .burger_stick_middle {
     width: 100%;
+  }
+
+  .burger_stick_middle.open {
+    width: 100%;
+    background-color: #767676;
   }
 
   .burger_stick_bottom {
@@ -104,12 +110,12 @@ nav {
     align-self: flex-end;
 
     transform-origin: left;
-    transition: all .33s cubic-bezier(.54,-.81,.57,.57);
-   
+    transition: transform .33s cubic-bezier(.54,-.81,.57,.57), background-color 0s;   
   }
 
   .burger_stick_bottom.open {
     transform: rotate(-90deg) translateX(-4px);
+    background-color: #767676;
   }  
 
   .overlay{
