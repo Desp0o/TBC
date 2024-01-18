@@ -32,7 +32,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 
-  background-color: var(--bg-light);
+  /* background-color: var(--bg-light); */
 }
 
 a{

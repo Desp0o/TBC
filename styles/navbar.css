@@ -113,6 +113,9 @@ nav {
   }  
 
   .overlay{
+    visibility: hidden;
+    opacity: 0;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -121,14 +124,24 @@ nav {
     width: 100%;
     height: 100svb;
 
-    background-color: rgba(22, 22, 22, 0.62);;
+    background-color: rgba(22, 22, 22, 0.62);
+    transition: all 0.3s ease;
+  }
+
+  .overlay.open{
+    visibility: visible;
+    opacity: 1;
+
+    transition: all 0.3s ease;
   }
 
   .res_menu_panel{
     position: fixed;
-    right: 0;
+    right: -200px;
     top: 0;
     z-index: 51;
+
+    opacity: 0.4;
 
     padding: 100px 15px 0 0;
 
@@ -139,6 +152,13 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: #222222;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .res_menu_panel.open{
+    right: 0;
+    opacity: 1;
   }
 
   .nav_links_responsive{
