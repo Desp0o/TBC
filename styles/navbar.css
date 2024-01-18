@@ -112,6 +112,18 @@ nav {
     transform: rotate(-90deg) translateX(-4px);
   }  
 
+  .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 51;
+
+    width: 100%;
+    height: 100svb;
+
+    background-color: rgba(22, 22, 22, 0.62);;
+  }
+
   .res_menu_panel{
     position: fixed;
     right: 0;
