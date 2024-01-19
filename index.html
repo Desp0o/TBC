@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/sectionFirst.css" />
     <link rel="stylesheet" href="./styles/sectionSecond.css" />
     <link rel="stylesheet" href="./styles/sectionThird.css" />
+    <link rel="stylesheet" href="./styles/sectionFourth.css" />
     <title>TBC x USAID</title>
   </head>
   <body>
@@ -79,7 +80,7 @@
       </div>
     </nav>
 
-    <!-- მეორე სექცია -->
+    <!-- პირველი სექცია -->
     <section class="section_first">
       <img src="./assets/images/firs-section-bg.webp" class="first-bg" alt="firs section bg"/>
       
@@ -106,12 +107,36 @@
     <!-- მესამე სექცია -->
     <section class="section_third">
       <div class="section_third_inner">
-        <p class="courses_title">სასწავლო კურსები</p>
+        <h2 class="courses_title">სასწავლო კურსები</h2>
+
 
         <div class="courses_list">
+          <!-- აქ რენდერდება ბლოკები ჯავასკრიპტიდან -->
+        </div>
+        
+      </div>
+    </section>
 
-          
+    <!-- მეოთხე სექცია -->
+    <section class="section_fourth">
+      <h3 class="slider_title">პროექტის პარტნიორები</h3>
 
+      <div class="slider">
+
+        <div class="slide active_slide">
+          <img src="./assets/icons/usaid.png" alt="partners logo" />
+          <img src="./assets/icons/space.webp" alt="partners logo" />
+          <img src="./assets/icons/tinet.png" alt="partners logo" />
+        </div>
+
+        <div class="slide">
+          <img src="./assets/icons/tegeta.png" alt="partners logo" />
+          <img src="./assets/icons/spectre.png" alt="partners logo" />
+          <img src="./assets/icons/tbc-leasing.png" alt="partners logo" />
+        </div>
+
+        <div class="slide">
+          <img src="./assets/icons/ufc.png" alt="partners logo" />
         </div>
         
       </div>
@@ -119,6 +144,7 @@
 
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/courseList.js"></script>
+    <script src="./scripts/slider.js"></script>
   </body>
 </html>
 
