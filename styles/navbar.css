@@ -16,7 +16,7 @@ nav {
 .navbar_inner {
   height: 100%;
   width: 100%;
-  max-width: 960px;
+  max-width: 980px;
   margin: 0 auto;
 
   display: flex;

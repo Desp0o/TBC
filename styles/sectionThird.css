@@ -8,9 +8,11 @@
 
 .section_third_inner{
     width: 100%;
-    max-width: 1000px;
+    max-width: 980px;
 
     margin: 0 auto;
+
+    background-color: thistle;
 }
 
 .courses_title{
@@ -19,17 +21,19 @@
 }
 
 .courses_list{
-    width: 100%;
+    padding: 0;
     margin-top: 70px;
 
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 10px;
+    gap: 40px;
+
+    background-color: teal;
 }
 
 .course_single_block{
     box-sizing: border-box;
-    min-width: 300px;
+    width: 300px;
     height: 420px;
 
     border-radius: 10px;
