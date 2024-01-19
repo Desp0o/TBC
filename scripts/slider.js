@@ -1,59 +1,89 @@
-const slider = document.querySelector('.slider').children
-const totalSlides = slider.length
-let index = 0
+const slider = document.querySelector('.slider').children;
+const totalSlides = slider.length;
+let currentIndex = 0;
 
-const leftBtn = document.getElementById('leftBtn')
-const rightBtn = document.getElementById('rightBtn')
-const dot1 = document.getElementById('dot1')
-const dot2 = document.getElementById('dot2')
-const dot3 = document.getElementById('dot3')
+// We need this for interval, to start and clear it,
+// otherwise we may miss any slide on click events
+let interval; 
 
-const dotsArr = [dot1, dot2, dot3]
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+const dot1 = document.getElementById('dot1');
+const dot2 = document.getElementById('dot2');
+const dot3 = document.getElementById('dot3');
 
-dotsArr.forEach( (dot, dotIndex) => {
+const dotsArr = [dot1, dot2, dot3];
+
+//change index and slide on click each dots
+dotsArr.forEach((dot, dotIndex) => {
     dot.addEventListener("click", () => {
-        updateSlider(dotIndex)
-    })
-})
+        currentIndex = dotIndex
+        updateSlider(currentIndex);
+    });
+});
 
+//update slide on dot click 
 const updateSlider = (updatedIndex) => {
     for (let i = 0; i < slider.length; i++) {
         slider[i].classList.remove('active_slide');
     }
 
     slider[updatedIndex].classList.add('active_slide');
+
+    clearInterval(interval) //we need clear interval to restart timer for slider when it gets any click action
+    startInterval() //start timer again to change sliders even without clicks
 };
 
+//click event for next slide
 const nextSlide = () => {
-    index++
+    currentIndex++;
 
-    if(index === totalSlides){
-        index = 0
+    if (currentIndex === totalSlides) {
+        currentIndex = 0;
     }
 
     for (let i = 0; i < slider.length; i++) {
-        slider[i].classList.remove('active_slide')
+        slider[i].classList.remove('active_slide');
     }
 
-    slider[index].classList.add('active_slide')
-}
+    slider[currentIndex].classList.add('active_slide')
 
+    clearInterval(interval) //we need clear interval to restart timer for slider when it gets any click action
+    startInterval() //start timer again to change sliders even without clicks
+};
+
+//click evet for previous event
 const prevSlide = () => {
-    
-    if(index === 0){
-        index = totalSlides - 1
-    }else{
-        index--
+    if (currentIndex === 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex--;
     }
 
     for (let i = 0; i < slider.length; i++) {
-        slider[i].classList.remove('active_slide')
+        slider[i].classList.remove('active_slide');
     }
 
-    slider[index].classList.add('active_slide')
-}
+    slider[currentIndex].classList.add('active_slide')
 
-leftBtn.addEventListener("click", prevSlide)
-rightBtn.addEventListener("click", nextSlide)
+    clearInterval(interval) //we need clear interval to restart timer for slider when it gets any click action
+    startInterval() //start timer again to change sliders even without clicks
+};
 
-setInterval(nextSlide, 3000);
+
+leftBtn.addEventListener("click", () => {
+    prevSlide();
+});
+rightBtn.addEventListener("click", () => {
+    nextSlide();
+});
+
+// Timer function for slider to change slides automatically
+const startInterval = () => {
+    interval = setInterval(() => {
+        nextSlide();
+    }, 4000);
+};
+
+startInterval()
+
