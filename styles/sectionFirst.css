@@ -1,4 +1,5 @@
 .section_first{
+    box-sizing: border-box;
     margin-top: 84px;
     width: 100%;
     position: relative;
