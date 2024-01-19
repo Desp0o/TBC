@@ -21,15 +21,14 @@
 
 .slider_container{
     width: 100%;
-    height: 80px;
-
+    min-height: 80px;
     margin: 0 auto;
     position: relative;
 }
 
 .slider{
     position: relative;
-
+    min-height: 80px;
     width: 100%;
     height: 100%;
 
@@ -39,9 +38,8 @@
 .slide{
     width: 100%;
     position: absolute;
-
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    left: 0;
 
     display: flex;
     align-items: center;
@@ -52,19 +50,23 @@
 }
 
 .active_slide{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    position: absolute;
     opacity: 1;
     transition: all 1s cubic-bezier(.37,0,.63,1);
-
 }
 
 .slide3{
     justify-content: center;
 }
+
 
 #leftBtn{
     position: absolute;
@@ -95,7 +97,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .dot{
@@ -106,4 +108,71 @@
 
     background-color: var(--grey);
     cursor: pointer;
+}
+
+
+@media (max-width:600px) {
+    .slider_title{
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    #leftBtn{
+        display: none;
+    }
+    
+    #rightBtn{
+        display: none;
+    }
+
+    .dot{
+        width: 8px;
+        height: 8px;
+    }
+
+    .slider{
+        min-height: 320px;
+        display: flex;
+    }
+
+    .slide{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 50px;
+    
+        opacity: 0;
+        transition: unset;
+    }
+
+    .active_slide{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 50px;
+    
+        opacity: 1;
+        transition: all 1s cubic-bezier(.37,0,.63,1);
+    }
+
+
+    .slide3{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
 }

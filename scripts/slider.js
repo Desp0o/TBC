@@ -45,14 +45,14 @@ const nextSlide = () => {
     for (let i = 0; i < slider.length; i++) {
         slider[i].classList.remove('active_slide');
     }
-
+    
     slider[currentIndex].classList.add('active_slide')
 
     clearInterval(interval) //we need clear interval to restart timer for slider when it gets any click action
     startInterval() //start timer again to change sliders even without clicks
 };
 
-//click evet for previous event
+//click event for previous event
 const prevSlide = () => {
     if (currentIndex === 0) {
         currentIndex = totalSlides - 1;
