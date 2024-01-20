@@ -19,6 +19,17 @@ burgerBtn.addEventListener("click", ()=> {
   overlay.classList.toggle("open")
 })
 
+//close on click overlay res menu panel and also close burger menu and close itselv overlay
+overlay.addEventListener("click", ()=> {
+  resMenuPanel.classList.remove("open")
+  overlay.classList.remove("open")
+
+  btn.querySelectorAll("span").forEach((item) => {
+    item.classList.remove("open");
+    btn.classList.remove("open");
+  });
+})
+
 
 ///////// scrolling animations
 let lastScrollPosition = 0;
