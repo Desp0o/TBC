@@ -1,129 +1,126 @@
-.privacy{
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 53;
+.privacy {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 53;
 
-    padding: 80px 60px 40px 90px;
+  padding: 80px 60px 40px 90px;
 
-    width: 50%;
-    height: 100vh;
+  width: 50%;
+  height: 100vh;
 
-    background-color: var(--bg-light);
+  background-color: var(--bg-light);
 
-    overflow-x: hidden;
-    overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
-    color: #8C8C8C;
+  color: #8c8c8c;
 
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.privacy.open{
-    right: 0;
+.privacy.open {
+  right: 0;
 }
 
-.privacy_panel_close_icon{
-    position: absolute;
-    right: 40px;
-    top: 40px;
+.privacy_panel_close_icon {
+  position: absolute;
+  right: 40px;
+  top: 40px;
 
-    width: 24px;
-    height: 21px;
-    fill: #8C8C8C;
+  width: 24px;
+  height: 21px;
+  fill: #8c8c8c;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.privacy h3{
-    font-size: 22px;
-    font-weight: 600;
+.privacy h3 {
+  font-size: 22px;
+  font-weight: 600;
 }
 
-.privacy h4{
-    font-weight: 900;
+.privacy h4 {
+  font-weight: 900;
 }
 
-.privacy p{
-    font-size: 14px;
+.privacy p {
+  font-size: 14px;
 }
 
-.privacy p a{
-    text-decoration: underline;
-    font-family: 'wfont-bold';
+.privacy p a {
+  text-decoration: underline;
+  font-family: "wfont-bold";
 }
 
-.privacy_close_btn{
-    width: 100%;
-    height: 65px;
-    margin-top: 100px;
+.privacy_close_btn {
+  width: 100%;
+  height: 65px;
+  margin-top: 100px;
 
-    outline: none;
-    border: none;
-    border-radius: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
 
-    background-color: var(--grey);
-    font-weight: 600;
-    color: var(--bg-navbar-footer);
+  background-color: var(--grey);
+  font-weight: 600;
+  color: var(--bg-navbar-footer);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.privacy_close_btn:hover{
-    background-color: var(--text-blue);
-    color: var(--text-main);
-
-    transition: all 0.3s ease;
+.privacy_mail {
+  text-decoration: none !important;
 }
 
-.privacy_mail{
-    text-decoration: none !important;
+.privacy_overlay {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 51;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(22, 22, 22, 0.62);
+  transition: all 0.3s ease;
 }
 
-.privacy_overlay{
-    display: block;
-    visibility: hidden;
-    opacity: 0;
+.privacy_overlay.open {
+  visibility: visible;
+  opacity: 1;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 51;
-
-    width: 100%;
-    height: 100vh;
-
-    background-color: rgba(22, 22, 22, 0.62);
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.privacy_overlay.open{
-    visibility: visible;
-    opacity: 1;
-
-    transition: all 0.3s ease;
+@media (hover: hover) {
+    .privacy_close_btn:hover {
+      background-color: var(--text-blue);
+      color: var(--text-main);
+    }
   }
 
-@media (max-width:900px) {
-    .privacy{
-        width: 80%;
-        padding: 80px 20px 100px 20px;
-    }
+@media (max-width: 900px) {
+  .privacy {
+    width: 80%;
+    padding: 80px 20px 100px 20px;
+  }
 
-    .privacy_close_btn{
-        margin-top: 50px;
-        height: 45px;
-    }
-
-    .privacy_close_btn:hover{
-        background-color: var(--grey);
-        color: var(--text-main);
-    }
+  .privacy_close_btn {
+    margin-top: 50px;
+    height: 45px;
+  }
 }
+
+
