@@ -52,3 +52,6 @@ a{
   height: fit-content;
 }
 
+.overflow_Hiddne{
+  overflow: hidden;
+}

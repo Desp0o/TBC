@@ -1,11 +1,13 @@
 
+const body = document.body
 const navbar = document.querySelector(".navbar")
-const btn = document.querySelector(".burger-menu");
+const burgerButton = document.querySelector(".burger-menu");
 
-btn.addEventListener("click", () => {
-  btn.querySelectorAll("span").forEach((item) => {
+//this function for burger menu "sticks" span aniamtions
+burgerButton.addEventListener("click", () => {
+  burgerButton.querySelectorAll("span").forEach((item) => {
     item.classList.toggle("open");
-    btn.classList.toggle("open");
+    burgerButton.classList.toggle("open");
   });
 });
 
@@ -15,18 +17,20 @@ const resMenuPanel = document.querySelector(".res_menu_panel")
 const overlay = document.querySelector(".overlay")
 
 burgerBtn.addEventListener("click", ()=> {
+  body.classList.toggle('overflow_Hiddne') //overflow
   resMenuPanel.classList.toggle("open")
   overlay.classList.toggle("open")
 })
 
 //close on click overlay res menu panel and also close burger menu and close itselv overlay
 overlay.addEventListener("click", ()=> {
-  resMenuPanel.classList.remove("open")
+  resMenuPanel.classList.remove("open") //overflow
   overlay.classList.remove("open")
+  body.classList.remove('overflow_Hiddne')
 
-  btn.querySelectorAll("span").forEach((item) => {
+  burgerBtn.querySelectorAll("span").forEach((item) => {
     item.classList.remove("open");
-    btn.classList.remove("open");
+    burgerBtn.classList.remove("open");
   });
 })
 
