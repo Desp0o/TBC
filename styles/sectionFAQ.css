@@ -52,6 +52,8 @@
 }
 
 .faq-question {
+  position: relative;
+
   height: 80px;
   display: flex;
   align-items: center;
@@ -87,6 +89,21 @@
   padding: 50px 0 50px 20px;
 }
 
+.faq_arrow{
+  fill: var(--text-main);
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  transition: all 0.3s ease;
+}
+
+.faq_arrow.expanded{
+  transform: rotate(-180deg);
+}
+
 @media (max-width:600px) {
   .faq_lis{
     padding-top: 40px;
@@ -97,7 +114,9 @@
   }
 
   .faq-question h4{
-    width: 70%;
+    width: 85%;
+    font-size: 16px;
+    font-weight: 400;
   }
 
   .faq_title a {

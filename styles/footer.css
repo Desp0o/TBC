@@ -85,6 +85,7 @@ footer {
     grid-row-start: 2;
     grid-row-end: unset;
     grid-column-start: 1;
+    align-self: flex-start;
   }
 
   .footer_inner a {
