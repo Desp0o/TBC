@@ -123,7 +123,7 @@
     }
 
     .privacy_close_btn:hover{
-        background-color: var(--text-blue);
+        background-color: var(--grey);
         color: var(--text-main);
     }
 }
