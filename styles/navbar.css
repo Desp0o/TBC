@@ -26,6 +26,10 @@ nav.transparent{
 
 }
 
+nav.hide{
+  top: -69px;
+}
+
 .navbar_inner {
   height: 100%;
   width: 100%;
