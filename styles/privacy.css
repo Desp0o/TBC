@@ -8,7 +8,7 @@
     padding: 80px 60px 40px 90px;
 
     width: 50%;
-    height: 100svb;
+    height: 100vh;
 
     background-color: var(--bg-light);
 
@@ -87,9 +87,43 @@
     text-decoration: none !important;
 }
 
+.privacy_overlay{
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 51;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(22, 22, 22, 0.62);
+    transition: all 0.3s ease;
+}
+
+.privacy_overlay.open{
+    visibility: visible;
+    opacity: 1;
+
+    transition: all 0.3s ease;
+  }
+
 @media (max-width:900px) {
     .privacy{
         width: 80%;
-        padding: 80px 20px 40px 20px;
+        padding: 80px 20px 100px 20px;
+    }
+
+    .privacy_close_btn{
+        margin-top: 50px;
+        height: 45px;
+    }
+
+    .privacy_close_btn:hover{
+        background-color: var(--text-blue);
+        color: var(--text-main);
     }
 }
