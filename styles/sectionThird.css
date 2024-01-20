@@ -17,6 +17,7 @@
 .courses_title {
   font-size: 24px;
   color: var(--text-main);
+  font-weight: 400;
 }
 
 .courses_list {
