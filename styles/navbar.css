@@ -148,7 +148,7 @@ nav.hide{
     z-index: 51;
 
     width: 100%;
-    height: 100svb;
+    height: 100vh;
 
     background-color: rgba(22, 22, 22, 0.62);
     transition: all 0.3s ease;
@@ -172,7 +172,7 @@ nav.hide{
     padding: 100px 15px 0 0;
 
     box-sizing: border-box;
-    height: 100svb;
+    height: 100vh;
     width: 60%;
 
     display: flex;
