@@ -42,10 +42,13 @@
     object-position: center;
 }
 
-@media (max-width:600px) {
+@media (max-width:700px) {
     .section_first{
         margin-top: 69px;
     }
+}
+
+@media (max-width:600px) {
 
     .section_first p:nth-child(1){
         font-size: 38px;

@@ -16,6 +16,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+nav.transparent{
+  background-color: #222222f2;
+  transition: all 0.3s ease;
+
 }
 
 .navbar_inner {
@@ -49,7 +57,7 @@ nav {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   nav {
     height: 69px;
   }

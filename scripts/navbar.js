@@ -1,5 +1,5 @@
-//select all span tag in navbar to create animation
 
+const navbar = document.querySelector(".navbar")
 const btn = document.querySelector(".burger-menu");
 
 btn.addEventListener("click", () => {
@@ -17,4 +17,14 @@ const overlay = document.querySelector(".overlay")
 burgerBtn.addEventListener("click", ()=> {
   resMenuPanel.classList.toggle("open")
   overlay.classList.toggle("open")
+})
+
+// transparent
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 0) {
+    console.log(0);
+  }
+
+  window.scrollY > 0 ? navbar.classList.add('transparent') : navbar.classList.remove('transparent')
 })
