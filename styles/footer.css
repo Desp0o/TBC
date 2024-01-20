@@ -89,11 +89,11 @@ footer {
   .footer_inner{
     grid-template-columns: auto;
   }
-
-  .contact_btn:hover{
-    background-color: unset;
-    transition: all 0.3s ease;
-    color: unset;
+  .contact_btn {
+    grid-row-start: 2;
+    grid-row-end: unset;
+    grid-column-start: 1;
+    align-self: flex-start;
   }
 
   .footer_privacy_p {
