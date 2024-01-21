@@ -1,4 +1,4 @@
-.section_fourth{
+.section_slider{
     overflow-x: hidden;
     box-sizing: border-box;
     width: 100%;
@@ -9,7 +9,7 @@
     color: var(--text-main);
 }
 
-.section_fourth_inner{
+.section_slider_inner{
     width: 100%;
     max-width: 980px;
     margin: 0 auto;

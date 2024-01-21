@@ -48,6 +48,7 @@ nav.hide{
 
 .nav_links_item {
   font-size: 14px;
+  transition: all 0.4s ease;
 }
 
 .nav_links_active {
@@ -60,6 +61,11 @@ nav.hide{
   display: none;
 }
 
+@media (hover: hover) {
+  .nav_links_item:hover{
+    color: var(--text-blue);
+  }
+}
 
 @media (max-width: 700px) {
   nav {

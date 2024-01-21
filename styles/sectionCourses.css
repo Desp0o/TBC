@@ -1,4 +1,4 @@
-.section_third {
+.section_courses {
   box-sizing: border-box;
   width: 100%;
 
@@ -7,7 +7,7 @@
   background-color: var(--bg-darker);
 }
 
-.section_third_inner {
+.section_courses_inner {
   width: 100%;
   max-width: 980px;
 
@@ -82,6 +82,14 @@
   margin-top: auto;
 
   cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+
+@media (hover: hover) {
+  .course_single_block_details:hover{
+    color: #2C78A3;
+  }
 }
 
 @media (max-width: 1024px) {

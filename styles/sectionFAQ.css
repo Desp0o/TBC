@@ -24,6 +24,8 @@
   font-size: 20px;
   font-weight: 600;
   font-family: "wfont";
+
+  transition: all 0.4s ease;
 }
 
 .faq_title h3 {
@@ -102,6 +104,12 @@
 
 .faq_arrow.expanded{
   transform: rotate(-180deg);
+}
+
+@media (hover: hover) {
+  .faq_title a:hover {
+    color: #B3B3B3;
+  }
 }
 
 @media (max-width:600px) {
