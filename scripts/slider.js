@@ -6,7 +6,6 @@ let interval; // We need this for interval, to start and clear it,otherwise we m
 let isPaused = false 
 let pauseHelper = true
 let startPosX = 0  //touch start position 
-let endPosX = 0 //touch end position
 const threshold = 50 //treshold for compare calculated distance
 
 const leftBtn = document.getElementById('leftBtn');
