@@ -80,6 +80,7 @@
     transform: translateY(-50%);
 
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #rightBtn{
@@ -92,6 +93,7 @@
     transform: translateY(-50%) rotate(180deg);
 
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .dots{
@@ -110,6 +112,13 @@
 
     background-color: var(--grey);
     cursor: pointer;
+}
+
+@media (hover: hover) {
+    #leftBtn:hover,
+    #rightBtn:hover{
+        fill:#9E9C9C;
+    }
 }
 
 @media (max-width:800px) {
