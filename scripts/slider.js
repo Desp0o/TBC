@@ -36,10 +36,8 @@ const updateSlider = (updatedIndex) => {
         isPaused = true
         pauseHelper = isPaused
         clearInterval(interval)
-    }else{
-        clearInterval(interval) //we need clear interval to restart timer for slider when it gets any click action
-        startInterval() //start timer again to change sliders even without clicks
     }
+    
 };
 
 //click event for next slide
@@ -56,8 +54,6 @@ const nextSlide = () => {
     
     slider[currentIndex].classList.add('active_slide')
 
-    clearInterval(interval) //we need clear interval to restart timer for slider when it gets any click action
-    startInterval() //start timer again to change sliders even without clicks
 };
 
 //click event for previous event
@@ -74,8 +70,6 @@ const prevSlide = () => {
 
     slider[currentIndex].classList.add('active_slide')
 
-    clearInterval(interval) //we need clear interval to restart timer for slider when it gets any click action
-    startInterval() //start timer again to change sliders even without clicks
 };
 
 
@@ -111,11 +105,20 @@ document.body.addEventListener('touchstart', (event) => {
 })
 
 
+sliderContainer.addEventListener('mouseenter', () => {
+    clearInterval(interval)
+})
+
+sliderContainer.addEventListener('mouseleave', () => {
+    clearInterval(interval)
+    startInterval()
+})
+
 // Timer function for slider to change slides automatically
 const startInterval = () => {
     interval = setInterval(() => {
         nextSlide();
-    }, 4000);
+    }, 3000);
 };
 
 startInterval()
