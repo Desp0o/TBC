@@ -61,3 +61,16 @@
         margin-top: 0;
     }
 }
+
+@media (max-width:360px) {
+    .section_first p:nth-child(1){
+        font-size: 30px;
+        line-height: 38px;
+    }
+    
+    .section_first p:nth-child(2){
+        font-size: 22px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+  }

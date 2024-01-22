@@ -113,6 +113,13 @@
 }
 
 @media (max-width:600px) {
+  .section_FAQ {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 50px 20px 100px 20px;
+  
+    background-color: var(--bg-darker);
+  }
   .faq_lis{
     padding-top: 40px;
   }
@@ -132,5 +139,23 @@
     bottom: -60px;
     left: 50%;
     transform: translate(-50%);
+  }
+}
+
+@media (max-width:360px) {
+  .faq_title h3 {
+    font-size: 16px;
+  }
+  .faq_title a {
+    font-size: 16px;
+  }
+  .faq-question h4{
+    width: 85%;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .faq-answer-inner-list{
+    box-sizing: border-box;
+    padding: 20px 0 20px 20px;
   }
 }

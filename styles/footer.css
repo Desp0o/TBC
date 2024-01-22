@@ -113,3 +113,14 @@ footer {
     grid-column-start: 3;
   }
 }
+
+@media (max-width:360px) {
+  .contact_btn {
+    width: 132px;
+    height: 39px;
+  }
+
+  .social_icons{
+    grid-column-start: 1;
+  }
+}
