@@ -1,10 +1,10 @@
+const sliderContainer = document.querySelector('.slider_container')
 const slider = document.querySelector('.slider').children;
 const totalSlides = slider.length;
 let currentIndex = 0;
-
-// We need this for interval, to start and clear it,
-// otherwise we may miss any slide on click events
-let interval; 
+let interval; // We need this for interval, to start and clear it,otherwise we may miss any slide on click events
+let isPaused = false 
+let pauseHelper = true
 
 const leftBtn = document.getElementById('leftBtn');
 const rightBtn = document.getElementById('rightBtn');
@@ -30,8 +30,16 @@ const updateSlider = (updatedIndex) => {
 
     slider[updatedIndex].classList.add('active_slide');
 
-    clearInterval(interval) //we need clear interval to restart timer for slider when it gets any click action
-    startInterval() //start timer again to change sliders even without clicks
+    //check if device supports touch events, and if yes add slider stop logic
+    // when dots is clicked, if not support device touch action clear and start interval
+    if('ontouchstart' in window){
+        isPaused = true
+        pauseHelper = isPaused
+        clearInterval(interval)
+    }else{
+        clearInterval(interval) //we need clear interval to restart timer for slider when it gets any click action
+        startInterval() //start timer again to change sliders even without clicks
+    }
 };
 
 //click event for next slide
@@ -77,6 +85,31 @@ leftBtn.addEventListener("click", () => {
 rightBtn.addEventListener("click", () => {
     nextSlide();
 });
+
+
+
+// to stop slider on touch slider main container like in TBC ACADEMY web page
+sliderContainer.addEventListener('touchstart', () => {
+    isPaused = true
+    pauseHelper = isPaused
+    clearInterval(interval)
+})
+
+
+// resume slider when touched outside of slider main container
+document.body.addEventListener('touchstart', (event) => {
+    isPaused = false
+
+    const outsideContainer = !sliderContainer.contains(event.target) //handle clicks outside of container
+
+    if (outsideContainer && pauseHelper && isPaused === false) {
+        clearInterval(interval);
+        startInterval();
+
+        pauseHelper = isPaused
+    }
+})
+
 
 // Timer function for slider to change slides automatically
 const startInterval = () => {
