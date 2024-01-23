@@ -86,7 +86,7 @@ activeLink.forEach( link => {
       let scrollSpeed = 40; 
 
       
-      if('ontouchstart' in window){
+      if(window.innerWidth < 700){
         scrollSpeed = 150; //make faster scroll on touch devices
 
           body.classList.remove('overflow_Hiddne') 
