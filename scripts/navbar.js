@@ -2,10 +2,12 @@
 const body = document.body
 const navbar = document.querySelector(".navbar")
 const burgerButton = document.querySelector(".burger-menu");
+const burgerButtonSpans = burgerButton.querySelectorAll('span');
+
 
 //this function for burger menu "sticks" span aniamtions
 burgerButton.addEventListener("click", () => {
-  burgerButton.querySelectorAll("span").forEach((item) => {
+  burgerButtonSpans.forEach((item) => {
     item.classList.toggle("open");
     burgerButton.classList.toggle("open");
   });
@@ -28,7 +30,7 @@ overlay.addEventListener("click", ()=> {
   overlay.classList.remove("open")
   body.classList.remove('overflow_Hiddne')
 
-  burgerBtn.querySelectorAll("span").forEach((item) => {
+  burgerButtonSpans.forEach((item) => {
     item.classList.remove("open");
     burgerBtn.classList.remove("open");
   });
@@ -70,4 +72,45 @@ window.addEventListener("scroll", () => {
       navbar.classList.remove('hide')
     }
   }
+})
+
+
+//we can check if route is equal to our location with 'window.location.href' to change page or scroll to top
+//but in this case we add only scroll top in our project like on tbc page
+const activeLink = document.querySelectorAll('.nav_links_active')
+activeLink.forEach( link => {
+  link.addEventListener('click', (event)=>{
+    event.preventDefault() // prevent from routing
+    
+      let currentPosY = window.scrollY;
+      let scrollSpeed = 40; 
+
+      
+      if('ontouchstart' in window){
+        scrollSpeed = 150; //make faster scroll on touch devices
+
+          body.classList.remove('overflow_Hiddne') 
+          resMenuPanel.classList.remove("open")
+          overlay.classList.remove("open")
+          burgerButtonSpans.forEach((item) => {
+            item.classList.remove("open");
+            burgerBtn.classList.remove("open");
+            console.log('hey');
+          });
+      }
+
+      //scroll animation with custom speed
+      const scrollStep = () => {
+        currentPosY -= scrollSpeed;
+
+        if (currentPosY > 0) {
+          window.scrollTo(0, currentPosY);
+          requestAnimationFrame(scrollStep);
+        } else {
+          window.scrollTo(0, 0);
+        }
+      }
+
+      requestAnimationFrame(scrollStep);
+  })
 })
