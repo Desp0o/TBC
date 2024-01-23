@@ -93,9 +93,9 @@ sliderContainer.addEventListener('touchstart', (event) => {
     startPosX = event.touches[0].clientX;
 })
 
-sliderContainer.addEventListener('touchmove', (event) => {
-    event.preventDefault()
-})
+// sliderContainer.addEventListener('touchmove', (event) => {
+//     event.preventDefault()
+// })
 
 sliderContainer.addEventListener('touchend', (event) => {
     const endPosX = event.changedTouches[0].clientX;
