@@ -1,54 +1,54 @@
 const courseArray = [
     {
-        cover: '/assets/images/ios.webp',
+        cover: './assets/images/ios.webp',
         title: 'iOS Development',
         status: 'რეგისტრაცია დასრულებულია',
         link: ''
     },
     {
-        cover: '/assets/images/react.webp',
+        cover: './assets/images/react.webp',
         title: 'React',
         status: 'რეგისტრაცია დასრულებულია',
         link: ''
     },
     {
-        cover: '/assets/images/pythonIntro.webp',
+        cover: './assets/images/pythonIntro.webp',
         title: 'Intro to Python',
         status: 'რეგისტრაცია დასრულებულია',
         link: ''
     },
     {
-        cover: '/assets/images/pythonAdv.webp',
+        cover: './assets/images/pythonAdv.webp',
         title: 'Advanced Python',
         status: 'რეგისტრაცია დასრულებულია',
         link: ''
     },
     {
-        cover: '/assets/images/security.webp',
+        cover: './assets/images/security.webp',
         title: 'Advanced Cybersecurity Course',
         status: 'რეგისტრაცია დასრულებულია',
         link: ''
     },
     {
-        cover: '/assets/images/tot.webp',
+        cover: './assets/images/tot.webp',
         title: 'ToT - Training of Trainers',
         status: 'რეგისტრაცია დასრულებულია',
         link: ''
     },
     {
-        cover: '/assets/images/blockchain.webp',
+        cover: './assets/images/blockchain.webp',
         title: 'Blockchain',
         status: 'რეგისტრაცია დასრულებულია',
         link: ''
     },
     {
-        cover: '/assets/images/devops.webp',
+        cover: './assets/images/devops.webp',
         title: 'DevOps',
         status: 'რეგისტრაცია დასრულებულია',
         link: ''
     },
     {
-        cover: '/assets/images/governance.webp',
+        cover: './assets/images/governance.webp',
         title: 'Information Security Governance',
         status: 'რეგისტრაცია დასრულებულია',
         link: ''
